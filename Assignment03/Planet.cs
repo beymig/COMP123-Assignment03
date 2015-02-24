@@ -46,7 +46,7 @@ namespace Assignment03
         }
 
         public int MoonCount
-        { 
+        {
             get
             {
                 return this._moonCount;
@@ -107,10 +107,22 @@ namespace Assignment03
             this._mass = mass;
         }
 
+            
+
         public override string ToString()
         {
-            Console.WriteLine("Name: {0}, Diameter: {1}, Mass: {2}", this.Name, this.Diameter, this.Mass);
-            return base.ToString();
+
+            
+            Console.WriteLine("Name: {0}", this.Name); 
+            Console.WriteLine("Diameter: {0}",this.Diameter); 
+            Console.WriteLine("Mass: {0}", this.Mass);
+            Console.WriteLine("Number of Moons: {0}", this.MoonCount);
+            Console.WriteLine("Orbital Period: {0} year(s)", this.OrbitalPeriod);
+            Console.WriteLine("Number of Rings: {0}", this.RingCount);
+            Console.WriteLine("Rotation Period: {0} day(s)", this.RotationPeriod);
+            Console.WriteLine("*****************************************");
+            Console.ReadKey();
+            return this.Name; 
         }
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Assignment03
 {
-    class GiantPlanet : Planet
+    class GiantPlanet : Planet, IHasMoons, IHasRings 
+
     {
+        
         ///Private Properties
         private string _type;
  
@@ -16,34 +18,41 @@ namespace Assignment03
             : base(name, diameter, mass) 
         {
             this._type = type;
+            Console.WriteLine("This giant planet type is: {0}",_type);
         }
 
-        public override bool HasMoons()
+            
+        public bool HasMoons()
         {
             bool hasMoons;
             if (MoonCount > 0)
             {
                 hasMoons = true;
+                Console.WriteLine("This Giant Planet has moons");
             }
             else
             {
                 hasMoons = false;
+                Console.WriteLine("This Giant Planet does not has moons");
             }
             return hasMoons;
         }
 
-        public override bool HasRings()
+        public bool HasRings()
         {
             bool hasRings;
             if (RingCount > 0)
             {
                 hasRings = true;
+                Console.WriteLine("This Giant Planet has rings");
             }
             else
             {
                 hasRings = false;
+                Console.WriteLine("This Giant Planet does not has rings");
             }
             return hasRings;
+            
         }
   
     }

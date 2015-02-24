@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment03
 {
-    class TerrestrialPlanet : Planet
+    class TerrestrialPlanet : Planet, IHasMoons, IHabitable
     {
          ///Private Properties
         private bool _oxygen;
@@ -18,23 +18,33 @@ namespace Assignment03
             this._oxygen = oxygen;
         }
 
-        public override bool HasMoons()
+        public bool HasMoons()
         {
             bool hasMoons;
             if (MoonCount > 0)
             {
                 hasMoons = true;
+                Console.WriteLine("This Terrestrial Planet has rings");
             }
             else
             {
                 hasMoons = false;
+                Console.WriteLine("This Giant Planet does not has moons");
             }
             return hasMoons;
         }
 
-        public override bool Habitable()
+        public  bool Habitable()
         {
-            
+
+            if (_oxygen == true)
+            { 
+                Console.WriteLine("This Terrestrial Planet is Habitable");
+            }
+            if (_oxygen == false)
+            {
+                Console.WriteLine("This Terrestrial Planet is not Habitable");
+            }
             return _oxygen;
         }
     }
