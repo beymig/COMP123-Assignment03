@@ -96,5 +96,21 @@ namespace Assignment03
                 this._rotationPeriod = value;
             }
         }
+
+        //Constructor
+
+        public Planet(string name, double diameter, double mass)
+        {
+
+            this._name = name;
+            this._diameter = diameter;
+            this._mass = mass;
+        }
+
+        public override string ToString()
+        {
+            Console.WriteLine("Name: {0}, Diameter: {1}, Mass: {2}", this.Name, this.Diameter, this.Mass);
+            return base.ToString();
+        }
     }
 }
