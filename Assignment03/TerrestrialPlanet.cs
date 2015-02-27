@@ -18,6 +18,7 @@ namespace Assignment03
             this._oxygen = oxygen;
         }
 
+        // Public method to check if the Terrestrial Planet has moons
         public bool HasMoons()
         {
             bool hasMoons;
@@ -33,7 +34,7 @@ namespace Assignment03
             }
             return hasMoons;
         }
-
+        // Public method to check if the Terrestrial Planet is Habitable
         public  bool Habitable()
         {
 

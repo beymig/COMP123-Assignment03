@@ -18,10 +18,12 @@ namespace Assignment03
             : base(name, diameter, mass) 
         {
             this._type = type;
-            Console.WriteLine("This giant planet type is: {0}",_type);
+            Console.WriteLine("****************************************");
+            Console.WriteLine("This Giant planet type is: {0}",_type);
         }
 
             
+        // Public method to check if the Giant Planet has moons
         public bool HasMoons()
         {
             bool hasMoons;
@@ -38,6 +40,7 @@ namespace Assignment03
             return hasMoons;
         }
 
+        // Public method to check if the Giant Planet has rings
         public bool HasRings()
         {
             bool hasRings;

@@ -108,7 +108,7 @@ namespace Assignment03
         }
 
             
-
+        //Public method to show in console the object properties
         public override string ToString()
         {
 
